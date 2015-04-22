@@ -1,4 +1,4 @@
-FROM centos:6
+FROM poklet/centos-baseimage
 
 MAINTAINER jeroen@jeroenvd.nl
 
@@ -19,4 +19,4 @@ RUN cd /scripts && chmod +x *.sh
 EXPOSE 22 21 80 7778 3306 443 25 993 110
 
 #Start app                                                                                                                                                                                                  
-ENTRYPOINT ["/scripts/StartKloxo.sh"]
+ENTRYPOINT ["/sbin/my_init"]
