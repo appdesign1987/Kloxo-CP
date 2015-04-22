@@ -14,7 +14,7 @@ RUN cd / && yum clean all && yum update mratwork-* -y
 RUN cd / && git clone https://github.com/appdesign1987/scripts.git
 
 # Make sure scripts are executable
-RUN cd /scripts && chmod +x *.sh && cd /script && chmod +x *.sh
+RUN cd /scripts && chmod +x *.sh
 
 EXPOSE 22 21 80 7778 3306 443 25 993 110
 
