@@ -2,7 +2,7 @@ FROM poklet/centos-baseimage
 
 MAINTAINER jeroen@jeroenvd.nl
 
-RUN yum update -y
+RUN (yum update -y || yum update -y)
 RUN (yum install -y git yum-utils yum-priorities vim-minimal subversion curl zip unzip || yum install -y git yum-utils yum-priorities vim-minimal subversion curl zip unzip)
 RUN yum install telnet wget -y
 #RUN sudo setenforce 0
