@@ -2,7 +2,7 @@ FROM poklet/centos-baseimage
 
 MAINTAINER jeroen@jeroenvd.nl
 
-RUN mkdir /build
+#RUN mkdir /build
 ADD build/runit /build/runit
 RUN /build/runit/install.sh
 
