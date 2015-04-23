@@ -2,6 +2,10 @@ FROM poklet/centos-baseimage
 
 MAINTAINER jeroen@jeroenvd.nl
 
+RUN mkdir /build
+ADD build/runit /build/runit
+RUN /build/runit/install.sh
+
 RUN (yum update -y || yum update -y)
 RUN (yum install -y git yum-utils yum-priorities vim-minimal subversion curl zip unzip || yum install -y git yum-utils yum-priorities vim-minimal subversion curl zip unzip)
 RUN (yum install telnet wget -y || yum install telnet wget -y)
